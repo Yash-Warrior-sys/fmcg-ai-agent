@@ -1,52 +1,227 @@
-# FMCG AI Agent — From Data to Intelligence
+# 🚀 FMCG AI Agent
 
-An AI-powered business intelligence agent that answers plain-English questions about FMCG sales data — grounded in real data, not guesses.
+A practical AI-powered business intelligence assistant for FMCG sales analytics. The system allows business users to ask natural language questions about sales, promotions, inventory, and regional performance using a Large Language Model integrated with real business datasets.
 
-## Overview
+---
 
-This project analyzes FMCG (Fast-Moving Consumer Goods) sales data — regions, SKUs, promotions, and stockouts — and answers business questions in natural language, using an LLM (Groq / LLaMA 3.3 70B) connected securely to real sales data.
+## 📌 Project Overview
 
-It's not a chatbot wrapper. Every answer is grounded in the actual dataset, not generated from guesswork.
+The FMCG AI Agent is designed to simulate an enterprise Business Intelligence assistant capable of answering business questions such as:
 
-## Why This Project
+- Which region generated the highest sales?
+- Did promotions increase revenue?
+- Which products performed best?
+- How did inventory levels impact sales?
+- Which SKUs should receive additional attention?
 
-Most beginner AI projects are either too trivial to teach anything, or too complex to finish. This one sits in the middle: real data, real business questions, real security and testing considerations — small enough to actually complete.
+Instead of relying on static dashboards, users interact using natural language and receive data-driven business insights.
 
-## Tech Stack
+---
 
-- Frontend: React, Vite, TanStack Start
-- LLM: Groq (LLaMA 3.3 70B) — chosen for speed, cost, and free-tier availability after hitting Gemini's quota limits
-- Data: FMCG sales dataset — 13 weeks, 4 regions, 12 SKUs, promotions, and stockout events
+## ✨ Features
 
-## Key Features
+- ✅ Natural language business analytics
+- ✅ Sales performance analysis
+- ✅ Promotion effectiveness evaluation
+- ✅ Regional comparison analytics
+- ✅ Inventory and stock analysis
+- ✅ SKU performance reporting
+- ✅ Server-side AI orchestration
+- ✅ Structured business recommendations
+- ✅ Secure API key handling
 
-- Plain-English business questions in, grounded answers out
-- Backend-only API key handling (never exposed client-side)
-- Example questions shown up front to guide users toward specific, answerable queries
-- Tested across every data dimension: inventory, regional sales, promotions
+---
 
-## Setup
+## 🛠️ Technology Stack
 
-git clone your-repo-url
+| Component | Technology |
+|-----------|------------|
+| Frontend | TanStack Start |
+| Language | TypeScript |
+| AI Model | Groq API |
+| Validation | Zod |
+| Runtime | Bun |
+| Architecture | Server-side AI Gateway |
+
+---
+
+## 🏗️ Project Architecture
+
+```text
+                   User
+                     │
+                     ▼
+            TanStack Frontend
+                     │
+                     ▼
+             agent.functions.ts
+                     │
+                     ▼
+            ai-gateway.server.ts
+                     │
+                     ▼
+                  Groq API
+                     │
+                     ▼
+             FMCG Dataset Engine
+                     │
+                     ▼
+              Business Insights
+```
+
+---
+
+## 📊 Dataset
+
+The project uses a structured FMCG beverage dataset containing:
+
+- Weekly sales data
+- Product SKU information
+- Regional performance metrics
+- Promotional campaign information
+- Inventory statistics
+- Stock efficiency indicators
+
+### Regions
+
+- North
+- South
+- East
+- West
+
+### Analysis Categories
+
+- Sales
+- Promotions
+- Inventory
+- Regional Performance
+- Product Performance
+
+---
+
+## 💬 Example Questions
+
+### Sales Analysis
+
+```
+Which region generated the highest sales?
+```
+
+### Promotion Analysis
+
+```
+Did promotions improve revenue?
+```
+
+### Regional Comparison
+
+```
+Compare North and South region performance.
+```
+
+### Product Performance
+
+```
+Which SKU generated the highest revenue?
+```
+
+### Inventory Analysis
+
+```
+Which products experienced stock shortages?
+```
+
+---
+
+## 📷 Screenshots
+
+### Main Interface
+
+(Add screenshot)
+
+### Sales Analysis
+
+(Add screenshot)
+
+### Promotion Analysis
+
+(Add screenshot)
+
+### Regional Comparison
+
+(Add screenshot)
+
+---
+
+## 📁 Project Structure
+
+```text
+fmcg-ai-agent
+│
+├── routes/
+│
+├── src/
+│   └── lib/
+│       ├── agent.functions.ts
+│       └── ai-gateway.server.ts
+│
+├── README.md
+├── bun.lock
+├── bunfig.toml
+└── .gitignore
+```
+
+---
+
+## 🔐 Security
+
+- API keys are handled through environment variables.
+- No secrets are stored in the repository.
+- Server-side API orchestration prevents client-side exposure.
+
+---
+
+## 🚀 Installation
+
+```bash
+git clone https://github.com/Yash-Warrior-sys/fmcg-ai-agent.git
+
 cd fmcg-ai-agent
-npm install
 
-Create a .env file with:
-VITE_GROQ_API_KEY=your_api_key_here
+bun install
 
-Run locally:
-npm run dev
+bun dev
+```
 
-## Lessons Learned (the honest version)
+---
 
-- Switched from Gemini to Groq after hitting a hard quota wall mid-build
-- Learned the hard way why API keys must never live in client-side code
-- VITE_ prefix is required for any environment variable the frontend needs to read
+## 🔮 Future Improvements
 
-## The Ebook
+- Multi-agent architecture
+- Sales forecasting
+- Dashboard visualizations
+- Retrieval-Augmented Generation (RAG)
+- Automated reporting
+- Performance monitoring
 
-The full development story — including every mistake — is documented in the companion ebook: "From Data to Intelligence: Building Your First FMCG AI Agent" by Yash Kharode.
+---
 
-## Author
+## 👨‍💻 Author
 
-Yash Kharode — Data Science & ML Developer
+**Yash**
+
+Engineering Student | AI & Data Analytics Enthusiast
+
+---
+
+## ⭐ Project Goal
+
+This project demonstrates practical implementation of:
+
+- Artificial Intelligence
+- Business Intelligence
+- Large Language Models
+- TypeScript Development
+- API Integration
+- Data Analytics
+- Enterprise Software Architecture
